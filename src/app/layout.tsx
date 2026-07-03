@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import AppLayout from "@/components/layout/AppLayout";
+import Providers from "./providers";
 
 export const metadata: Metadata = {
   title: "Jordans WMS",
@@ -15,9 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <AppLayout>
-          {children}
-        </AppLayout>
+        <Providers>
+          <AppLayout>{children}</AppLayout>
+        </Providers>
       </body>
     </html>
   );
